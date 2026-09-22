@@ -1,763 +1,1392 @@
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-  <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-PGZH8HT');</script>
-  <!-- End Google Tag Manager -->
-
-  <!-- Materialize - Compiled and minified CSS-->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
-  <!-- Font Awesome Icon - CSS-->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
-  <!-- Custom Styles-->
-  <link rel="stylesheet" href="/assets/css/style.css" />
-  <!-- Modern portfolio redesign -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="Tirth Dalwadi &mdash; Software Engineer and Cybersecurity Master's student." name="description"/>
+  <title>
+   Tirth Dalwadi | Software Engineer
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
   <style>
-    :root{--bg:#07111f;--surface:#101e32;--surface2:#14253d;--text:#edf5ff;--muted:#9db0c7;--line:rgba(157,176,199,.16);--accent:#53d6c7;--accent2:#66a6ff;--soft:rgba(83,214,199,.10);--shadow:0 24px 70px rgba(0,0,0,.28);--radius:22px}
-    html{scroll-behavior:smooth}body{background:radial-gradient(circle at 80% 0%,rgba(83,214,199,.09),transparent 28rem),radial-gradient(circle at 20% 30%,rgba(102,166,255,.07),transparent 30rem),var(--bg);color:var(--text);font-family:Inter,sans-serif;line-height:1.75;font-size:15px}
-    h1,h2,h3,h4,.brand-logo,.card-title{font-family:"Space Grotesk",sans-serif;letter-spacing:-.025em}a{color:var(--accent);transition:.25s ease}a:hover{color:#8bf1e5}
-    nav.hide-on-small-only{width:250px;background:rgba(7,17,31,.82);border-right:1px solid var(--line);box-shadow:none;backdrop-filter:blur(18px)}
-    nav .side-nav.fixed{width:250px;background:transparent;box-shadow:none;padding:18px 14px;display:flex;flex-direction:column}
-    .side-nav .logo{height:auto!important;margin:0 0 22px;padding:16px 0 26px!important;border-bottom:1px solid var(--line)}
-    .profile-pic{width:108px!important;height:108px!important;object-fit:cover;margin:0 auto;border:3px solid rgba(83,214,199,.55);box-shadow:0 0 0 8px rgba(83,214,199,.07),0 16px 35px rgba(0,0,0,.3)}
-    .side-nav li.bold{margin:4px 0;border-radius:12px;overflow:hidden}.side-nav li.bold a{height:50px;line-height:50px;border-radius:12px;color:var(--muted)!important;font-weight:600;padding-left:18px}.side-nav li.bold a i{color:var(--accent);margin-right:13px}.side-nav li.bold a:hover{color:var(--text)!important;background:var(--soft);transform:translateX(3px)}
-    main{margin-left:250px}nav.hide-on-large.only.trigger{background:rgba(7,17,31,.9);border-bottom:1px solid var(--line);backdrop-filter:blur(18px)}nav .name-title a,nav .name-title span{color:var(--text)!important}nav .name-title span{opacity:.6}
-    main .section{min-height:auto;padding:100px clamp(24px,5vw,90px);border-bottom:1px solid rgba(157,176,199,.07);position:relative}.container{width:min(1100px,100%)!important;max-width:none!important}
-    .page-title{display:inline-flex;align-items:center;gap:14px;margin:0 0 45px!important;padding:0!important;background:transparent!important;color:var(--text)!important;font-size:clamp(30px,4vw,44px);font-weight:700;position:relative}.page-title:after{content:"";width:52px;height:3px;border-radius:99px;background:linear-gradient(90deg,var(--accent),var(--accent2));display:inline-block}
-    #intro{min-height:100vh;display:flex;align-items:center;overflow:hidden;background:linear-gradient(90deg,rgba(7,17,31,.98),rgba(7,17,31,.84) 48%,rgba(7,17,31,.55)),radial-gradient(circle at 78% 45%,rgba(83,214,199,.13),transparent 25rem)}#intro .overlay{display:none}#intro .content{margin:0!important;max-width:820px;position:relative;z-index:2}
-    #intro h2{color:var(--text);font-size:clamp(42px,7vw,76px);line-height:1.02;margin:0 0 18px;font-weight:700}#intro h2 .teal{color:var(--accent)!important}#intro h5{color:var(--muted)!important;font-size:clamp(17px,2vw,22px);line-height:1.65;max-width:780px}#intro h5:first-of-type{color:var(--accent)!important;font-weight:600!important;margin-bottom:18px}.typing{color:var(--accent)!important}#intro .caption>h5:last-of-type{color:var(--muted)!important;font-size:16px;line-height:1.85;max-width:700px}
-    .social{margin:28px 0}.icon-btn{width:48px;height:48px;margin-right:10px;border:1px solid var(--line);border-radius:14px;color:var(--text);background:rgba(255,255,255,.04);cursor:pointer;transition:.25s ease}.icon-btn:hover{transform:translateY(-3px);background:var(--soft);border-color:rgba(83,214,199,.4);color:var(--accent)}
-    .buttons a{display:inline-flex;align-items:center;justify-content:center;min-width:135px;height:48px;padding:0 22px;margin:5px 10px 5px 0;border-radius:12px;font-weight:700;text-transform:none;box-shadow:none;border:1px solid var(--line)}.buttons .readme{background:linear-gradient(135deg,var(--accent),#39b9ad);color:#041019!important;border-color:transparent}.buttons .contactme{background:transparent;color:var(--text)!important}.buttons a:hover{transform:translateY(-2px)}
-    .card{background:linear-gradient(145deg,rgba(19,36,59,.94),rgba(11,23,40,.94))!important;color:var(--text);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;margin:0 0 24px;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}.card:hover{transform:translateY(-5px);border-color:rgba(83,214,199,.28);box-shadow:0 28px 80px rgba(0,0,0,.36)}.card-content{padding:30px!important}.card-title,.card-title a{color:var(--text)!important;font-size:22px!important;font-weight:700}.role{color:var(--accent)!important;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.08em;margin:6px 0 12px}.card li,.flow-text li{color:var(--muted);margin-bottom:7px}.card-action{background:rgba(255,255,255,.025)!important;border-top:1px solid var(--line)!important;color:var(--muted);padding:18px 30px!important}.card-action span{color:var(--muted);font-size:13px}
-    #experience .card img{max-height:72px;max-width:120px;object-fit:contain;filter:drop-shadow(0 5px 12px rgba(0,0,0,.2))}.flow-text{color:var(--muted);font-size:17px}.flow-text b{color:var(--text)}.flow-text p{max-width:900px;margin-bottom:24px}
-    #projects .card.medium{height:430px!important;display:flex;flex-direction:column}#projects .card-image{height:220px;overflow:hidden;background:#091625}#projects .card-image img{height:100%!important;width:100%!important;object-fit:cover;transition:transform .5s ease}#projects .card:hover .card-image img{transform:scale(1.05)}#projects .card-content{flex:1}#projects .card-reveal{background:#101e32!important;color:var(--text);padding:28px!important}#projects .card-reveal li{color:var(--muted)}#projects .card-reveal .card-title{color:var(--accent)!important}.btn-floating{background:var(--surface2)!important;border:1px solid var(--line);box-shadow:none}.btn-floating:hover{background:var(--accent)!important;color:#07111f}
-    #skills h4{color:var(--text)!important;font-size:20px;font-weight:700;margin:0 0 28px}#skills .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(105px,1fr));gap:14px;margin:0}#skills .row>div{width:auto!important;float:none!important;padding:16px 10px;min-height:115px;border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--muted);font-size:12px;font-weight:600;transition:.25s ease}#skills .row>div:hover{transform:translateY(-4px);border-color:rgba(83,214,199,.3);background:var(--soft);color:var(--text)}#skills img{width:50px;height:50px;object-fit:contain;margin:0 auto}
-    #education .row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:0}#education .row>.col{width:auto!important;float:none!important}#education .card{height:100%;margin:0}#education .card-title{line-height:1.35}#education .brown-text{color:var(--accent)!important}
-    #contact .container{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}#contact .container p{margin:0;padding:20px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025);display:flex;align-items:center;gap:15px}#contact .container p>a:first-child{flex:0 0 auto}#contact .container p a.hoverline,#contact .container p>a:last-child{color:var(--muted);font-weight:500}#contact .container p:hover{border-color:rgba(83,214,199,.3);background:var(--soft)}
-    .z-depth-1,.z-depth-2,.z-depth-3,.z-depth-4,.z-depth-5{box-shadow:none}
-    @media(max-width:992px){main{margin-left:0}main .section{padding:85px 24px}#intro{min-height:calc(100vh - 56px)}#education .row{grid-template-columns:1fr}#contact .container{grid-template-columns:1fr}}
-    @media(max-width:600px){body{font-size:14px}main .section{padding:70px 18px}.page-title{margin-bottom:30px!important}#intro h2{font-size:44px}#intro .caption>h5:last-of-type{font-size:15px}.card-content{padding:22px!important}.card-action{padding:15px 22px!important}#experience .card .row{display:flex;align-items:center}#experience .card .row>.col.m2{width:28%}#experience .card .row>.col.m10{width:72%}#skills .row{grid-template-columns:repeat(3,1fr);gap:9px}#skills .row>div{min-height:95px;padding:10px 5px}#skills img{width:42px;height:42px}#projects .card.medium{height:420px!important}}
+   :root {
+  --navy:#07111f;
+  --navy2:#0d1b2e;
+  --ink:#142033;
+  --muted:#667085;
+  --line:#e7ebf0;
+  --bg:#f7f9fc;
+  --white:#fff;
+  --teal:#13b8a6;
+  --blue:#3b82f6;
+  --soft:#e9fbf8;
+  --shadow:0 14px 45px rgba(15,23,42,.08);
+  --radius:20px;
+}
+* {
+  box-sizing:border-box;
+}
+html {
+  scroll-behavior:smooth;
+  scroll-padding-top:90px;
+}
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:Inter,system-ui,sans-serif;
+  line-height:1.7;
+}
+a {
+  color:inherit;
+  text-decoration:none;
+}
+button {
+  font:inherit;
+}
+.sidebar {
+  position:fixed;
+  inset:0 auto 0 0;
+  width:250px;
+  background:var(--navy);
+  color:#fff;
+  padding:28px 18px;
+  display:flex;
+  flex-direction:column;
+  z-index:20;
+}
+.brand {
+  display:flex;
+  align-items:center;
+  gap:13px;
+  padding:4px 10px 28px;
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+.brand img {
+  width:58px;
+  height:58px;
+  object-fit:cover;
+  border-radius:50%;
+  border:2px solid rgba(19,184,166,.8);
+}
+.brand strong {
+  display:block;
+  font-family:'Space Grotesk';
+  font-size:19px;
+}
+.brand span {
+  font-size:12px;
+  color:#9ba9bc;
+}
+.nav {
+  padding-top:25px;
+  display:grid;
+  gap:6px;
+}
+.nav a {
+  display:flex;
+  align-items:center;
+  gap:13px;
+  padding:12px 13px;
+  border-radius:12px;
+  color:#aeb9c9;
+  font-size:14px;
+  font-weight:600;
+  transition:.2s;
+}
+.nav a i {
+  width:19px;
+  text-align:center;
+  color:#5ee1d1;
+}
+.nav a:hover,.nav a.active {
+  background:rgba(255,255,255,.08);
+  color:#fff;
+}
+.resume {
+  margin-top:auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  background:var(--teal);
+  color:#04211d!important;
+  padding:12px;
+  border-radius:12px;
+  font-weight:800!important;
+}
+.resume:hover {
+  background:#27cdbb!important;
+}
+.sidebar-social {
+  display:flex;
+  gap:9px;
+  margin:18px 3px;
+}
+.sidebar-social a {
+  width:38px;
+  height:38px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:10px;
+  display:grid;
+  place-items:center;
+  color:#cbd5e1;
+}
+.sidebar-social a:hover {
+  background:rgba(255,255,255,.08);
+  color:#fff;
+}
+main {
+  margin-left:250px;
+}
+.section {
+  padding:100px clamp(28px,6vw,90px);
+}
+.wrap {
+  max-width:1120px;
+  margin:auto;
+}
+.section-label {
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:var(--teal);
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+.section-label:after {
+  content:'';
+  width:34px;
+  height:2px;
+  background:var(--teal);
+  border-radius:9px;
+}
+.section-title {
+  font:700 clamp(32px,4vw,48px)/1.1 'Space Grotesk';
+  margin:0 0 14px;
+  color:var(--ink);
+}
+.section-subtitle {
+  color:var(--muted);
+  max-width:700px;
+  margin:0 0 38px;
+}
+.hero {
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  background:linear-gradient(135deg,#fff 0%,#f8fbff 65%,#eefaf8 100%);
+  position:relative;
+  overflow:hidden;
+}
+.hero:before {
+  content:'';
+  position:absolute;
+  width:520px;
+  height:520px;
+  border-radius:50%;
+  background:rgba(19,184,166,.09);
+  right:-170px;
+  top:-180px;
+}
+.hero-grid {
+  position:relative;
+  display:grid;
+  grid-template-columns:minmax(0,1.4fr) 330px;
+  gap:70px;
+  align-items:center;
+}
+.eyebrow {
+  font-size:14px;
+  font-weight:800;
+  color:var(--teal);
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+.hero h1 {
+  font:700 clamp(48px,6.5vw,78px)/.98 'Space Grotesk';
+  letter-spacing:-.055em;
+  margin:0;
+  color:var(--navy);
+}
+.hero h1 span {
+  color:var(--teal);
+}
+.hero-role {
+  font:600 22px 'Space Grotesk';
+  margin:22px 0 15px;
+  color:#344054;
+}
+.hero-role span {
+  color:var(--teal);
+}
+.hero-copy {
+  font-size:16px;
+  color:var(--muted);
+  max-width:720px;
+}
+.hero-actions {
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  padding:13px 20px;
+  border-radius:12px;
+  font-weight:800;
+  border:1px solid var(--line);
+  transition:.2s;
+}
+.btn-primary {
+  background:var(--navy);
+  color:#fff;
+  border-color:var(--navy);
+}
+.btn-primary:hover {
+  transform:translateY(-2px);
+  background:#102641;
+}
+.btn-secondary {
+  background:#fff;
+}
+.btn-secondary:hover {
+  transform:translateY(-2px);
+  border-color:#cbd5e1;
+}
+.hero-social {
+  display:flex;
+  gap:9px;
+  margin-top:24px;
+}
+.hero-social a {
+  width:42px;
+  height:42px;
+  border:1px solid var(--line);
+  border-radius:11px;
+  background:#fff;
+  display:grid;
+  place-items:center;
+  color:#475467;
+  box-shadow:0 6px 20px rgba(15,23,42,.05);
+}
+.hero-social a:hover {
+  color:var(--teal);
+  border-color:#a7e8df;
+}
+.hero-card {
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:26px;
+  padding:26px;
+  box-shadow:var(--shadow);
+}
+.hero-photo {
+  width:100%;
+  aspect-ratio:1;
+  border-radius:20px;
+  object-fit:cover;
+  background:#eef2f6;
+}
+.mini-title {
+  font:700 20px 'Space Grotesk';
+  margin:22px 0 4px;
+}
+.mini-muted {
+  color:var(--muted);
+  font-size:13px;
+}
+.availability {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:17px;
+  padding:8px 11px;
+  background:var(--soft);
+  color:#087c70;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:800;
+}
+.dot {
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--teal);
+}
+.about-grid {
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:28px;
+}
+.panel {
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:30px;
+  box-shadow:var(--shadow);
+}
+.panel p {
+  color:var(--muted);
+  margin-top:0;
+}
+.facts {
+  display:grid;
+  gap:12px;
+}
+.fact {
+  padding:17px;
+  border-radius:14px;
+  background:#f8fafc;
+  border:1px solid #edf0f4;
+}
+.fact b {
+  display:block;
+  font-size:13px;
+  color:#98a2b3;
+  margin-bottom:3px;
+}
+.fact span {
+  font-weight:700;
+  color:var(--ink);
+}
+.timeline {
+  position:relative;
+  margin-top:38px;
+}
+.timeline:before {
+  content:'';
+  position:absolute;
+  left:12px;
+  top:7px;
+  bottom:7px;
+  width:2px;
+  background:#dce5ec;
+}
+.experience-card {
+  position:relative;
+  padding-left:44px;
+  margin-bottom:26px;
+}
+.experience-card:before {
+  content:'';
+  position:absolute;
+  left:5px;
+  top:25px;
+  width:16px;
+  height:16px;
+  border:4px solid var(--bg);
+  background:var(--teal);
+  border-radius:50%;
+  box-shadow:0 0 0 1px #9ddfd7;
+}
+.exp-box {
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:26px;
+  box-shadow:var(--shadow);
+}
+.exp-top {
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:flex-start;
+}
+.company {
+  font:700 22px 'Space Grotesk';
+  margin:0;
+}
+.role {
+  color:var(--teal);
+  font-weight:800;
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  margin:5px 0;
+}
+.date {
+  white-space:nowrap;
+  color:#98a2b3;
+  font-size:13px;
+}
+.exp-box ul {
+  color:var(--muted);
+  margin:16px 0 0;
+  padding-left:20px;
+}
+.tags {
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:17px;
+}
+.tag {
+  font-size:11px;
+  font-weight:700;
+  color:#475467;
+  background:#f2f4f7;
+  padding:5px 9px;
+  border-radius:999px;
+}
+.projects {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+}
+.project {
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  transition:.25s;
+}
+.project:hover {
+  transform:translateY(-5px);
+  box-shadow:0 20px 55px rgba(15,23,42,.12);
+}
+.project-img {
+  height:220px;
+  background:#eaf0f5;
+  overflow:hidden;
+}
+.project-img img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.4s;
+}
+.project:hover .project-img img {
+  transform:scale(1.04);
+}
+.project-body {
+  padding:24px;
+}
+.project h3 {
+  font:700 23px 'Space Grotesk';
+  margin:0 0 8px;
+}
+.project p {
+  color:var(--muted);
+  font-size:14px;
+}
+.project-links {
+  display:flex;
+  gap:9px;
+  margin-top:20px;
+}
+.small-btn {
+  padding:9px 13px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  font-size:12px;
+  font-weight:800;
+}
+.small-btn:hover {
+  border-color:#a7e8df;
+  color:#078f82;
+}
+.skill-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+.skill {
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:20px 12px;
+  text-align:center;
+  transition:.2s;
+}
+.skill:hover {
+  transform:translateY(-3px);
+  border-color:#a7e8df;
+  box-shadow:var(--shadow);
+}
+.skill img {
+  width:48px;
+  height:48px;
+  object-fit:contain;
+  margin-bottom:9px;
+}
+.skill span {
+  display:block;
+  font-size:12px;
+  font-weight:700;
+  color:#475467;
+}
+.education {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+}
+.edu {
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:26px;
+  box-shadow:var(--shadow);
+}
+.edu h3 {
+  font:700 21px 'Space Grotesk';
+  margin:0;
+}
+.edu .place {
+  color:var(--teal);
+  font-size:13px;
+  font-weight:800;
+  margin:6px 0 16px;
+}
+.edu p,.edu li {
+  color:var(--muted);
+  font-size:14px;
+}
+.edu ul {
+  padding-left:20px;
+}
+.contact-box {
+  background:var(--navy);
+  border-radius:25px;
+  padding:40px;
+  color:#fff;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+  box-shadow:var(--shadow);
+}
+.contact-box h2 {
+  font:700 40px 'Space Grotesk';
+  margin:0 0 10px;
+}
+.contact-box p {
+  color:#aeb9c9;
+}
+.contact-links {
+  display:grid;
+  gap:10px;
+}
+.contact-link {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px;
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:12px;
+  color:#d7dfeb;
+}
+.contact-link i {
+  width:20px;
+  color:#5ee1d1;
+  text-align:center;
+}
+.contact-link:hover {
+  background:rgba(255,255,255,.06);
+  color:#fff;
+}
+footer {
+  margin-left:250px;
+  padding:25px 30px;
+  text-align:center;
+  color:#98a2b3;
+  font-size:12px;
+}
+.mobile-nav {
+  display:none;
+}
+@media(max-width:1050px) {
+  .sidebar {
+    width:220px;
+  }
+  main,footer {
+    margin-left:220px;
+  }
+  .hero-grid {
+    grid-template-columns:1fr 280px;
+    gap:35px;
+  }
+  .skill-grid {
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+@media(max-width:800px) {
+  .sidebar {
+    display:none;
+  }
+  .mobile-nav {
+    display:flex;
+    position:sticky;
+    top:0;
+    z-index:30;
+    background:rgba(7,17,31,.97);
+    color:#fff;
+    padding:14px 18px;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .mobile-nav strong {
+    font:700 18px 'Space Grotesk';
+  }
+  .mobile-nav a {
+    color:#fff;
+  }
+  .mobile-nav .links {
+    display:flex;
+    gap:14px;
+    font-size:13px;
+  }
+  .mobile-nav .links a {
+    color:#cbd5e1;
+  }
+  main,footer {
+    margin-left:0;
+  }
+  .section {
+    padding:75px 20px;
+  }
+  .hero {
+    min-height:auto;
+    padding:80px 20px;
+  }
+  .hero-grid,.about-grid,.contact-box {
+    grid-template-columns:1fr;
+  }
+  .hero-card {
+    max-width:360px;
+  }
+  .projects,.education {
+    grid-template-columns:1fr;
+  }
+  .skill-grid {
+    grid-template-columns:repeat(3,1fr);
+  }
+  .exp-top {
+    flex-direction:column;
+  }
+  .date {
+    white-space:normal;
+  }
+  .contact-box h2 {
+    font-size:32px;
+  }
+}
+@media(max-width:480px) {
+  .skill-grid {
+    grid-template-columns:repeat(2,1fr);
+  }
+  .hero h1 {
+    font-size:46px;
+  }
+  .hero-role {
+    font-size:19px;
+  }
+}
   </style>
-  <title>Tirth Dalwadi | Software Developer</title>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126939217-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-126939217-2');
-  </script>
-
-  <!-- Open Graph-->
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Tirth Dalwadi | Software Developer" />
-  <meta property="og:description" content="Software Developer" />
-  <meta property="og:url" content="https://github.com/Tirth-Dalwadi" />
-  <meta property="og:site_name" content="Tirth Dalwadi | Software Developer" />
-  <meta property="article:publisher" content="https://github.com/Tirth-Dalwadi" />
-  <meta property="og:image" content="https://varadbhogayata.github.io/examples/preview.JPG" />
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@tirth_dalwadi" />
-  <meta name="twitter:title" content="Coder | Technofreak | Explorer | Minimalist | Humane" />
-  <meta name="twitter:description" content="Software Developer" />
-  <meta name="twitter:url" content="https://www.instagram.com/tirth_dalwadi/" />
-  <meta name="author" content="Tirth Dalwadi" />
-  <meta name="description"
-    content="Software Developer with a passion for frontend development and artificial intelligence." />
-  <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-icon-60x60.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon/apple-icon-76x76.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-icon-114x114.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicon/apple-icon-120x120.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicon/apple-icon-152x152.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-icon-180x180.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon/android-icon-192x192.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png" />
-  <link rel="manifest" href="/assets/img/favicon/manifest.json" />
-  <meta name="msapplication-TileColor" content="#ffffff" />
-  <meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png" />
-  <meta name="theme-color" content="#ffffff" />
-  <meta name="robots" content="index, follow" />
-  <!-- Google Site Verification for indexing -->
-  <meta name="google-site-verification" content="_qxK8tePiU2fhnwlwnJ7pkDFnj1k2EiKq_cYGy1Cb84" />
-</head>
-
-<body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGZH8HT" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe>
-  </noscript>
-
-  <!-- Navigation Menu-->
-  <!-- Nav class 1 -->
-  <nav class="hide-on-small-only">
-    <ul class="side-nav fixed section table-of-contents">
-
-      <li class="logo">
-        <a id="logo-container" aria-label="Navigate to the beginning of the page" href="#intro"
-          class="brand-logo grey-blue-text">
-          <img src="/assets/img/tirthdalwadi.png" class="circle img-responsive profile-pic" alt="avatar">
-        </a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-person small"></i><span>About</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Experience section" href="#experience"
-          class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-trending-up small"></i><span>Experience</span></a>
-      </li>
-
-      <li class="bold">
-        <!-- mdi-av-web small
-             mdi-av-my-library-books small-->
-        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
-            class="mdi-av-my-library-books small"></i><span>Projects</span></a>
-      </li>
-
-      <li class="bold">
-        <!--
-        ICONS:
-        mdi-action-assessment
-        mdi-social-poll
-        mdi-av-equalizer
-        -->
-        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-assessment small"></i><span>Skills</span></a>
-      </li>
-
-      <li class="bold">
-        <!--
-        ICONS:
-        -->
-        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-school small"></i><span>Education</span></a>
-      </li>
-
-      <li class="bold">
-        <!-- 
-        1. mdi-communication-contacts
-        2. mdi-content-mail
-        3. mdi-communication-email
-        -->
-        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
-            class="mdi-content-mail small"></i><span>Contact</span></a>
-      </li>
-
-      <li class="bold">
-
-        <!--  INSERT RESUME LINK HERE -->
-        <a aria-label="Open Tirth's resume in a new tab"
-          href="https://drive.google.com/file/d/10LUVXdNUQcioUdqrc8wA2A5Pkb5p-HdZ/view?usp=sharing" target="_blank"
-          class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>
-      </li>
-    </ul>
-  </nav>
-
-  <!-- Nav class 2 -->
-  <nav class="hide-on-large only trigger z-depth-1">
-    <a aria-label="Toggle visibility of the mobile navbar" href="#" data-activates="slide-out"
-      class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-    <div class="name-title">
-      <a id="name" aria-label="Navigate to the beginning of the page" href="#" class="teal-text">Tirth Dalwadi</a><span
-        class="black-text">Software Developer</span>
+ </head>
+ <body>
+  <aside class="sidebar">
+   <a class="brand" href="#home">
+    <img alt="Tirth Dalwadi" src="/assets/img/tirthdalwadi.png"/>
+    <div>
+     <strong>
+      Tirth Dalwadi
+     </strong>
+     <span>
+      Software Engineer
+     </span>
     </div>
+   </a>
+   <nav class="nav">
+    <a class="active" href="#home">
+     <i class="fa-solid fa-house">
+     </i>
+     Home
+    </a>
+    <a href="#about">
+     <i class="fa-regular fa-user">
+     </i>
+     About
+    </a>
+    <a href="#experience">
+     <i class="fa-solid fa-briefcase">
+     </i>
+     Experience
+    </a>
+    <a href="#projects">
+     <i class="fa-solid fa-code">
+     </i>
+     Projects
+    </a>
+    <a href="#skills">
+     <i class="fa-solid fa-layer-group">
+     </i>
+     Skills
+    </a>
+    <a href="#education">
+     <i class="fa-solid fa-graduation-cap">
+     </i>
+     Education
+    </a>
+    <a href="#contact">
+     <i class="fa-regular fa-envelope">
+     </i>
+     Contact
+    </a>
+   </nav>
+   <div class="sidebar-social">
+    <a aria-label="LinkedIn" href="https://www.linkedin.com/in/tirth-dalwadi/" target="_blank">
+     <i class="fa-brands fa-linkedin-in">
+     </i>
+    </a>
+    <a aria-label="GitHub" href="https://github.com/Tirth-Dalwadi" target="_blank">
+     <i class="fa-brands fa-github">
+     </i>
+    </a>
+    <a aria-label="Email" href="mailto:dalwaditirth10@gmail.com">
+     <i class="fa-regular fa-envelope">
+     </i>
+    </a>
+   </div>
+   <a class="resume" href="https://drive.google.com/file/d/10LUVXdNUQcioUdqrc8wA2A5Pkb5p-HdZ/view?usp=sharing" target="_blank">
+    <i class="fa-regular fa-file-lines">
+    </i>
+    View Resume
+   </a>
+  </aside>
+  <nav class="mobile-nav">
+   <strong>
+    Tirth Dalwadi
+   </strong>
+   <div class="links">
+    <a href="#about">
+     About
+    </a>
+    <a href="#experience">
+     Experience
+    </a>
+    <a href="#projects">
+     Projects
+    </a>
+    <a href="#contact">
+     Contact
+    </a>
+   </div>
   </nav>
-
-  <!-- Nav class 3 -->
-  <nav class="hide-on-large only">
-    <ul id="slide-out" class="side-nav">
-      <li class="bold">
-        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-person small"></i><span>About</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Experience section" href="#experience"
-          class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-trending-up small"></i><span>Experience</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
-            class="mdi-av-my-library-books small"></i><span>Projects</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-assessment small"></i><span>Skills</span></a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-school small"></i><span>Education</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
-            class="mdi-content-mail small"></i><span>Contact</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Open Tirth's Resume in a new tab"
-          href="https://drive.google.com/file/d/1J8dl1eSuACV0DH19ihzs1I-EE_EhL7dc/view?usp=sharing" target="_blank"
-          class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>
-      </li>
-    </ul>
-  </nav>
-
-  <!-- Main Content-->
   <main>
-    <!-- First Section: Heading lines and image -->
-    <section id="intro" class="section scrollspy full-height">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="col-md-9">
-          <div class="content section-padding valign" style="margin-left: 10%; margin-top: 50px;">
-            <div class="caption">
-              <h2>Hi, I'm <span class="teal">Tirth Dalwadi.</span></h2>
-              <h5 style="color:#fff">A <span class="typing" style="font-weight: 300; color:#004d40"></span></h5>
-              <!-- <h5 style="color:#00796b">A <span class="typing" style="font-weight: 300; color:#fff"></span></h5> -->
-              <h5>Dedicated Software Engineer with experience in full-stack development, specializing in building secure and scalable web applications. Proficient in Java, Spring Boot, JSP, and Servlets, with hands-on expertise in database integration and dynamic data handling. Successfully contributed to large-scale projects like TCS BaNCS, enhancing user experience and optimizing backend performance. Adept at collaborating with cross-functional teams to deliver innovative solutions under tight deadlines.</h5>
-            </div>
-            <div class="social">
-              <a href="https://www.linkedin.com/in/tirth-dalwadi/" target="_blank">
-                <button class="icon-btn linkedin">
-                  <i class="fa fa-linkedin"></i>
-                </button>
-              </a>
-              <a href="https://github.com/Tirth-Dalwadi" target="_blank">
-                <button class="icon-btn github">
-                  <i class="fa fa-github"></i>
-                </button>
-              </a>
-            </div>
-
-            <div class='buttons'>
-              <a href="#about" class="readme">Read More</a>
-              <a href="#contact" class="contactme">Contact Me</a>
-            </div>
-          </div>
-        </div>
+   <section class="section hero" id="home">
+    <div class="wrap hero-grid">
+     <div>
+      <div class="eyebrow">
+       Software Engineer &middot; Cybersecurity
       </div>
-    </section>
-
-    <!-- Second Section: About -->
-    <section id="about" class="section scrollspy">
-      <h3 class="page-title white-text teal">About</h3>
-      <div class="container flow-text">
-        <!-- <blockquote>
-          <h2>
-            A Software Developer with a passion for Backend Development and Artificial Intelligence.
-
-          </h2>
-        </blockquote> -->
-        <p>
-          I am a Software Engineer with experience in Java, Spring Boot, and web development. Motivated and eager to learn, I focus on delivering secure and innovative solutions while continuously improving my skills. Driven and committed to excellence in every task. <br> 
-          For anything important, please write to me on Instagram -
-          @tirth_dalwadi or email at dalwaditirth10@gmail.com
-        </p>
-        <p>
+      <h1>
+       Hi, I'm
+       <span>
+        Tirth.
+       </span>
+      </h1>
+      <div class="hero-role">
+       I build
+       <span id="typing">
+        secure software
+       </span>
+       .
+      </div>
+      <p class="hero-copy">
+       Software Engineer with experience in Java, Spring Boot and full-stack development, with a growing focus on cybersecurity. I enjoy turning complex requirements into clean, reliable and scalable software.
+      </p>
+      <div class="hero-actions">
+       <a class="btn btn-primary" href="#projects">
+        Explore my work
+        <i class="fa-solid fa-arrow-right">
+        </i>
+       </a>
+       <a class="btn btn-secondary" href="#contact">
+        Let's connect
+       </a>
+      </div>
+      <div class="hero-social">
+       <a href="https://www.linkedin.com/in/tirth-dalwadi/" target="_blank">
+        <i class="fa-brands fa-linkedin-in">
+        </i>
+       </a>
+       <a href="https://github.com/Tirth-Dalwadi" target="_blank">
+        <i class="fa-brands fa-github">
+        </i>
+       </a>
+      </div>
+     </div>
+     <div class="hero-card">
+      <img alt="Tirth Dalwadi" class="hero-photo" src="/assets/img/tirthdalwadi.png"/>
+      <div class="mini-title">
+       Tirth Dalwadi
+      </div>
+      <div class="mini-muted">
+       MSc Cybersecurity &middot; NTNU
+      </div>
+      <div class="availability">
+       <span class="dot">
+       </span>
+       Open to opportunities
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="section" id="about">
+    <div class="wrap">
+     <div class="section-label">
+      01 &middot; About
+     </div>
+     <h2 class="section-title">
+      A little about me
+     </h2>
+     <p class="section-subtitle">
+      A software engineer who likes backend systems, security and learning by building.
+     </p>
+     <div class="about-grid">
+      <div class="panel">
+       <p>
+        I am a Software Engineer with experience in Java, Spring Boot and web development. I focus on building secure and practical solutions while continuously expanding my technical skills.
+       </p>
+       <p>
+        I am currently pursuing an MSc in Cybersecurity through the CYBERSURE Joint Master's Programme at NTNU in Trondheim, Norway.
+       </p>
+       <p>
+        My goal is to work on challenging engineering problems where software development and security meet.
+       </p>
+      </div>
+      <div class="facts">
+       <div class="fact">
+        <b>
+         Core languages
+        </b>
+        <span>
+         Java &middot; C++ &middot; Python &middot; Kotlin &middot; JavaScript
+        </span>
+       </div>
+       <div class="fact">
+        <b>
+         Backend
+        </b>
+        <span>
+         Spring Boot &middot; SQL &middot; MySQL &middot; MongoDB
+        </span>
+       </div>
+       <div class="fact">
+        <b>
+         Mobile
+        </b>
+        <span>
+         Android &middot; Kotlin &middot; Flutter &middot; Dart
+        </span>
+       </div>
+       <div class="fact">
+        <b>
+         Tools
+        </b>
+        <span>
+         Git &middot; GitHub &middot; Firebase &middot; Vercel
+        </span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="section" id="experience">
+    <div class="wrap">
+     <div class="section-label">
+      02 &middot; Experience
+     </div>
+     <h2 class="section-title">
+      Where I've worked
+     </h2>
+     <p class="section-subtitle">
+      A mix of professional engineering experience, internships and leadership work.
+     </p>
+     <div class="timeline">
+      <div class="experience-card">
+       <div class="exp-box">
+        <div class="exp-top">
+         <div>
+          <h3 class="company">
+           Tata Consultancy Services
+          </h3>
+          <div class="role">
+           Systems Engineer
+          </div>
+         </div>
+         <div class="date">
+          Jun 2024 &ndash; Jun 2026
+         </div>
+        </div>
         <ul>
-          <li><b>Languages:</b> C, C++, Java, Python, Kotlin, HTML/CSS, JavaScript, JSP</li>
-          <li><b>Databases:</b> MySQL, MongoDB</li>
-          <li><b>Libraries & Other:</b> Spring Boot, NumPy, Pandas, matplotlib, Firebase</li>
-          <li><b>Tools & Technologies:</b> Git, Github, Eclipse, WinSCP, Putty, Bitbucket, Android Studio, Vercel</li>
+         <li>
+          Contributed to development and maintenance of the TCS BaNCS project.
+         </li>
+         <li>
+          Implemented backend logic using Java and Spring Boot for efficient data processing.
+         </li>
+         <li>
+          Worked on live tracking and dynamic updates in a web application.
+         </li>
         </ul>
-
-        </p>
-
+        <div class="tags">
+         <span class="tag">
+          Java
+         </span>
+         <span class="tag">
+          Spring Boot
+         </span>
+         <span class="tag">
+          SQL
+         </span>
+         <span class="tag">
+          Oracle DB
+         </span>
+        </div>
+       </div>
+      </div>
+      <div class="experience-card">
+       <div class="exp-box">
+        <div class="exp-top">
+         <div>
+          <h3 class="company">
+           Exatorial
+          </h3>
+          <div class="role">
+           Android Developer Intern
+          </div>
+         </div>
+         <div class="date">
+          Feb 2024 &ndash; Mar 2024
+         </div>
+        </div>
+        <ul>
+         <li>
+          Enhanced the Trakkia Android application with scalable features and intuitive interfaces.
+         </li>
+         <li>
+          Collaborated with clients and resolved bugs through continuous improvement cycles.
+         </li>
+        </ul>
+        <div class="tags">
+         <span class="tag">
+          Kotlin
+         </span>
+         <span class="tag">
+          XML
+         </span>
+         <span class="tag">
+          Figma
+         </span>
+         <span class="tag">
+          Postman
+         </span>
+        </div>
+       </div>
+      </div>
+      <div class="experience-card">
+       <div class="exp-box">
+        <div class="exp-top">
+         <div>
+          <h3 class="company">
+           Nessviews
+          </h3>
+          <div class="role">
+           Flutter Developer Intern
+          </div>
+         </div>
+         <div class="date">
+          Jul 2023 &ndash; Aug 2023
+         </div>
+        </div>
+        <ul>
+         <li>
+          Developed mobile application frontend components and integrated APIs.
+         </li>
+         <li>
+          Fixed UI/UX issues and contributed to application improvements.
+         </li>
+        </ul>
+        <div class="tags">
+         <span class="tag">
+          Flutter
+         </span>
+         <span class="tag">
+          Dart
+         </span>
+         <span class="tag">
+          Figma
+         </span>
+         <span class="tag">
+          Bitbucket
+         </span>
+        </div>
+       </div>
+      </div>
+      <div class="experience-card">
+       <div class="exp-box">
+        <div class="exp-top">
+         <div>
+          <h3 class="company">
+           AIESEC
+          </h3>
+          <div class="role">
+           Incoming Global Sector Manager
+          </div>
+         </div>
+         <div class="date">
+          Feb 2022 &ndash; Jul 2022
+         </div>
+        </div>
+        <ul>
+         <li>
+          Interviewed international applicants for volunteering projects in India.
+         </li>
+         <li>
+          Hosted meetings with AIESEC committees and helped organise national and international conferences.
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="section" id="projects">
+    <div class="wrap">
+     <div class="section-label">
+      03 &middot; Projects
+     </div>
+     <h2 class="section-title">
+      Things I've built
+     </h2>
+     <p class="section-subtitle">
+      Selected projects spanning web, Android and practical application development.
+     </p>
+     <div class="projects">
+      <article class="project">
+       <div class="project-img">
+        <img alt="Fitness Website" src="/assets/img/blog-3.jpg"/>
+       </div>
+       <div class="project-body">
+        <h3>
+         Fitness Website
+        </h3>
         <p>
-          Aspiring to take on more challenging roles in Software Engineering that leverage my expertise, foster continuous growth, and provide opportunities to contribute to innovative projects.
+         A responsive fitness platform with resources, nutrition information, recommendations and social sharing.
         </p>
-      </div>
-    </section>
-
-    <!-- Third Section: Experience -->
-    <section id="experience" class="section scrollspy">
-      <h3 class="page-title white-text teal">Experience</h3>
-      <div class="container">
-
-        <!-- Latest Experience -->
-        <div class="card">
-          <div class="card-content">
-            <div class="row">
-              <div class="col s12 m2">
-                <a href="https://www.tcs.com/" target="_blank"><img alt="Exatorial logo"
-                    src="/assets/img/tcs_logo.png" class="responsive-img center-block" /></a>
-              </div>
-              <!-- <div class="col s12 m10"> -->
-              <div class="col s12 m10">
-                <p>
-                  <span class="card-title"><a href="https://www.tcs.com/" target="_blank"
-                      class="teal-text hoverline">Tata Consultancy Services</a></span>
-                </p>
-              </div>
-            </div>
-            <div class="role brown-text text-darken-2">Systems Engineer</div>
-            <ul>
-              <li>Contributed to the development and maintenance of the TCS BaNCS project</li>
-              <li>Designed and implemented backend logic using Java, Spring Boot for efficient data processing</li>
-              <li>Actively participated in problem-solving for live tracking and dynamic updates in the web app.</li>
-              <li>
-                <b>Tools:</b> Core Java, Spring Boot, SQL, Oracle DB, Putty, WinSCP 
-              </li>
-            </ul>
-          </div>
-          <div class="card-action">
-            <span>Jun 2024 - JUN 2026 | New Delhi, India</span>
-          </div>
+        <div class="tags">
+         <span class="tag">
+          HTML
+         </span>
+         <span class="tag">
+          CSS
+         </span>
+         <span class="tag">
+          JavaScript
+         </span>
+         <span class="tag">
+          Vercel
+         </span>
         </div>
-
-
-        <div class="card">
-          <div class="card-content">
-            <div class="row">
-              <div class="col s12 m2">
-                <a href="https://guide.exatorial.com/" target="_blank"><img alt="Exatorial logo"
-                    src="/assets/img/exatorial_logo_1.png" class="responsive-img center-block" /></a>
-              </div>
-              <!-- <div class="col s12 m10"> -->
-              <div class="col s12 m10">
-                <p>
-                  <span class="card-title"><a href="https://guide.exatorial.com/" target="_blank"
-                      class="teal-text hoverline">Exatorial</a></span>
-                </p>
-              </div>
-            </div>
-            <div class="role brown-text text-darken-2">Android Developer Intern</div>
-            <ul>
-              <li>Collaborated closely with clients to enhance their Android application (Trakkia)</li>
-              <li>Designed and implemented scalable features and intuitive user interfaces</li>
-              <li>Delivered prompt bug resolution and continuous improvement updates</li>
-              <li>
-                <b>Tools:</b> Kotlin, XML, Figma, Postman, Android Studio, Github
-              </li>
-            </ul>
-          </div>
-          <div class="card-action">
-            <span>Feb 2024 - Mar 2024 | New Delhi, India</span>
-          </div>
+        <div class="project-links">
+         <a class="small-btn" href="https://fitness-website-delta.vercel.app/" target="_blank">
+          Live site &nearrow;
+         </a>
+         <a class="small-btn" href="https://github.com/Tirth-Dalwadi/Fitness_Website" target="_blank">
+          GitHub &nearrow;
+         </a>
         </div>
-
-
-
-        <div class="card">
-          <div class="card-content">
-            <div class="row">
-              <div class="col s12 m2">
-                <a href="https://nessviews.com/" target="_blank"><img alt="Nessviews logo"
-                    src="/assets/img/nessviews.png" class="responsive-img center-block" /></a>
-              </div>
-              <!-- <div class="col s12 m10"> -->
-              <div class="col s12 m10">
-                <p>
-                  <span class="card-title"><a href="https://nessviews.com/" target="_blank"
-                      class="teal-text hoverline">Nessviews</a></span>
-                </p>
-              </div>
-            </div>
-            <div class="role brown-text text-darken-2">Flutter Developer
-              Intern</div>
-            <ul>
-              <li> Developing mobile application frontend </li>
-              <li> Integrating functionality and APIs in the app </li>
-              <li> Fixed UI/UX related bugs </li>
-              <li>
-                <b>Tools:</b> Flutter, Dart, Figma, Postman, Android Studio, Bitbucket
-              </li>
-            </ul>
-          </div>
-          <div class="card-action">
-            <span>Jul 2023 - Aug 2023 | Remote</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-content">
-            <div class="row">
-              <div class="col s12 m2">
-                <a href="https://aiesec.org/" target="_blank"><img alt="Swastiklogo" src="/assets/img/aiesec.png"
-                    class="responsive-img center-block" /></a>
-              </div>
-              <!-- <div class="col s12 m10"> -->
-              <div class="col s12 m10">
-                <p>
-                  <span class="card-title"><a href="https://aiesec.org/" target="_blank"
-                      class="teal-text hoverline">AIESEC</a></span>
-                </p>
-              </div>
-            </div>
-            <div class="role brown-text text-darken-2">Incoming Global Sector Manager</div>
-            <ul>
-              <li>
-                Interviewed foreign officials applying for volunteering projects in India.
-              </li>
-              <li>
-                Hosted regular meetings with multiple AIESEC committees from all around the world.
-              </li>
-              <li>
-                Organised and hosted conferences at national and international level.
-              </li>
-            </ul>
-          </div>
-          <div class="card-action">
-            <span>Feb 2022 - Jul 2022 | New Delhi, Delhi, India</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Fourth Section: Projects -->
-    <section id="projects" class="section scrollspy">
-      <h3 class="page-title white-text teal">Projects</h3>
-      <div class="container">
-        <div class="row">
-
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Fitness Website" src="/assets/img/blog-3.jpg" style="height: 100%; width: 100%"
-                  class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Fitness
-                  Website<i class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  A Fitness Website
-                </p>
-              </div>
-              <div class="card-reveal">
-                <!-- TODO: change this -- only close button -->
-                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
-                <span class="card-title grey-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> Html, Css, Javascript, Vercel</li>
-                  <li>Wide range of fitness resources and information</li>
-                  <li>Nutrition tips and meal plans to support fitness goals</li>
-                  <li>Reviews and recommendations for fitness equipment,
-                    supplements, and apparel</li>
-                  <li>Social media integration for easy sharing and
-                    interaction with other fitness enthusiasts</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit " href="https://fitness-website-delta.vercel.app/" target="_blank"
-                    data-position="top" data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/Tirth-Dalwadi/Fitness_Website"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Android Project -->
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of web app" src="/assets/img/weather1.png" style="height: 100%; width: 100%"
-                  class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Weather Query
-                  <i class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  A Weather Report App
-                </p>
-              </div>
-              <div class="card-reveal">
-                <!-- TODO: change this -- only close button -->
-                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
-                <span class="card-title teal-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> Kotlin, XML, Weather API, Android Studio</li>
-                  <li>An android application that gives weather report of searched city</li>
-                  <li>Added functionality of showing user location's weather report</li>
-                  <li>Added Room database to show weather report of last searched city</li>
-
-                </ul>
-
-                <!-- Change here -->
-                <div class="card-action">
-                  <a aria-label="Visit the GitHub repo for  project"
-                    href="https://github.com/Tirth-Dalwadi/Weather-Query-App" target="_blank" data-position="top"
-                    data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- ************* -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Fifth Section: Skills -->
-    <section id="skills" class="section scrollspy">
-      <h3 class="page-title white-text teal">Skills</h3>
-      <div class="container">
-        <!-- Languages and Databases -->
-        <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">Languages and Databases</h4>
-            <div class="row text-center">
-              <div class="col s4 m2">
-                <img alt src="/assets/img/cpp.png" class="responsive-img" />CPP
-              </div>
-              <div class="col s4 m2">
-                <img alt src="/assets/img/python-logo-1-300x300.jpg" class="responsive-img" />Python
-              </div>
-              <div class="col s4 m2">
-                <img alt src="/assets/img/kotlin.jpg" class="responsive-img" />Kotlin
-              </div>
-              <div class="col s4 m2">
-                <img alt src="/assets/img/dart.png" class="responsive-img" />Dart
-              </div>
-              <div class="col s4 m2">
-                <img alt src="/assets/img/html5-300x300.jpg" class="responsive-img" />HTML5
-              </div>
-              <div class="col s4 m2">
-                <img alt src="/assets/img/css3-300x300.jpg" class="responsive-img" />CSS3
-              </div>
-              <div class="col s4 m2">
-                <img alt src="/assets/img/mysql-logo-1-300x300.jpg" class="responsive-img" />MySQL
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">Libraries & Others</h4>
-            <div class="row text-center">
-
-              <div class="col s4 m2">
-                <img alt src="/assets/img/numpy-logo-1-500x500.jpg" class="responsive-img" />NumPy
-              </div>
-              <div class="col s4 m2">
-                <img alt src="/assets/img/pandas-logo-2-500x500.jpg" class="responsive-img" />Pandas
-              </div>
-              <div class="col s4 m2">
-                <img alt src="/assets/img/matplotlib-logo-1-500x500.jpg" class="responsive-img" />matplotlib
-              </div>
-              <div class="col s4 m2">
-                <img alt src="/assets/img/firebase.png" class="responsive-img" />Firebase
-              </div>
-
-              <div class="col s4 m2">
-                <img alt src="/assets/img/git.png" class="responsive-img" />Git
-              </div>
-              <div class="col s4 m2">
-                <img alt src="/assets/img/github.png" class="responsive-img" />Github
-              </div>
-              <div class="col s4 m2">
-                <img alt src="/assets/img/bitbucket.png" class="responsive-img" />Bitbucket
-              </div>
-              <div class="col s4 m2">
-                <img alt src="/assets/img/vercel1868.jpg" class="responsive-img" />Vercel
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Seventh Section: Education -->
-    <section id="education" class="section scrollspy">
-      <h3 class="page-title white-text teal">Education</h3>
-      <div class="container">
-        <div class="row">
-          <!-- Education -->
-          
-          <div class="col s12 m6 l6">
-            <div class="card">
-              <div class="card-content">
-                <p>
-                  <span class="card-title"><a href="https://www.ntnu.no/" target="_blank"
-                      class="teal-text hoverline">Norwegian University of Science and Technology</a></span>
-                </p>
-                <p class="brown-text">Trondheim, Norway</p>
-                <p>
-                  <b>Degree: </b>MSc in Cybersecurity — CYBERSURE Joint Master’s Programme                  
-                </p>
-
-                <ul>
-                  <p>
-                    <b>Relevant Courseworks:</b>
-                  <ul>
-                    <li>Cybersecurity & Assurance</li>
-                    <li>Ethical Hacking</li>
-                    <li>Secure Cryptographic Implementations</li>
-                    <li>Wireless Network Security</li>
-                    <li>Data Privacy</li>
-                  </ul>
-                  </p>
-
-                </ul>
-              </div>
-            </div>
-            <!-- Change here school link -->
-
-          </div>
-
-          
-          <div class="col s12 m6 l6">
-            <div class="card">
-              <div class="card-content">
-                <p>
-                  <span class="card-title"><a href="https://www.jmi.ac.in/" target="_blank"
-                      class="teal-text hoverline">Jamia Millia Islamia</a></span>
-                </p>
-                <p class="brown-text">New Delhi, Delhi, India</p>
-                <p>
-                  <b>Degree: </b>Bachelors Of Technology Computer Engineering
-                  <br>
-                  <b>CGPA: </b>9.84
-                </p>
-
-                <ul>
-                  <p>
-                    <b>Relevant Courseworks:</b>
-                  <ul>
-                    <li>Data Structures & Algorithms</li>
-                    <li>Database Management System</li>
-                    <li>Object Oriented Programming</li>
-                    <li>Machine Learning</li>
-                    <li>Data Mining</li>
-                  </ul>
-                  </p>
-
-                </ul>
-              </div>
-            </div>
-            <!-- Change here school link -->
-
-          </div>
-          <div class="col s12 m6 l6">
-            <div class="card">
-              <div class="card-content">
-                <p>
-                  <span class="card-title"><a href="https://www.vbpsdwarka.org/" target="_blank"
-                      class="teal-text hoverline">Vishwa Bharati Public School</a></span>
-                </p>
-                <p class="brown-text">New Delhi, Delhi, India</p>
-                <p>
-                  <b>Degree: </b>Senior Secondary School 10+2(Non Medical)
-                  <br>
-                  <b>CGPA: </b>10
-                </p>
-
-                <ul>
-                  <p>
-                    <b>Relevant Courseworks:</b>
-                  <ul>
-                    <li>C++ Programming</li>
-                    <li>Object Oriented Programming</li>
-                    <li>Physics, Chemistry, Maths, English</li>
-                  </ul>
-                  </p>
-
-                </ul>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Eight Section: Contact -->
-    <section id="contact" class="section scrollspy full-height">
-      <h3 class="page-title white-text teal">Contact</h3>
-      <div class="container">
+       </div>
+      </article>
+      <article class="project">
+       <div class="project-img">
+        <img alt="Weather Query Android app" src="/assets/img/weather1.png"/>
+       </div>
+       <div class="project-body">
+        <h3>
+         Weather Query
+        </h3>
         <p>
-          <a aria-label="Call Tirth" data-position="top" data-tooltip="Call Varad"
-            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-phone"></i><a
-              aria-label="Call Varad">+91-8882165814</a></a>
+         Android weather application with city search, location-based weather and Room database caching for recent searches.
         </p>
-        <p>
-          <a aria-label="Email Tirth" href="mailto:dalwaditirth10@gmail.com" target="_blank" data-position="top"
-            data-tooltip="Email Tirth" class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-              class="fa fa-envelope"></i><a aria-label="Email Varad" href="mailto:dalwaditirth10@gmail.com"
-              class="hoverline">dalwaditirth10@gmail.com</a></a>
-        </p>
-        <p>
-          <a aria-label="View Tirth on GitHub" href="https://github.com/Tirth-Dalwadi" target="_blank" data-position="top"
-            data-tooltip="View Tirth on GitHub"
-            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-github"></i><a
-              aria-label="Tirth Github" href="https://github.com/Tirth-Dalwadi" class="hoverline"
-              target="_blank">github.com/Tirth-Dalwadi</a></a>
-        </p>
-        <p>
-          <a aria-label="View Tirth on LinkedIn" href="https://www.linkedin.com/in/tirth-dalwadi/" target="_blank"
-            data-position="top" data-tooltip="View Tirth on LinkedIn"
-            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-              class="fa fa-linkedin"></i><a aria-label="Tirth on LinkedIn"
-              href="https://www.linkedin.com/in/tirth-dalwadi/" class="hoverline"
-              target="_blank">linkedin.com/in/tirth-dalwadi</a></a>
-        </p>
+        <div class="tags">
+         <span class="tag">
+          Kotlin
+         </span>
+         <span class="tag">
+          Android
+         </span>
+         <span class="tag">
+          Weather API
+         </span>
+         <span class="tag">
+          Room
+         </span>
+        </div>
+        <div class="project-links">
+         <a class="small-btn" href="https://github.com/Tirth-Dalwadi/Weather-Query-App" target="_blank">
+          GitHub &nearrow;
+         </a>
+        </div>
+       </div>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section class="section" id="skills">
+    <div class="wrap">
+     <div class="section-label">
+      04 &middot; Skills
+     </div>
+     <h2 class="section-title">
+      My toolkit
+     </h2>
+     <p class="section-subtitle">
+      Technologies I have used across coursework, internships and professional projects.
+     </p>
+     <div class="skill-grid">
+      <div class="skill">
+       <img alt="C++" src="/assets/img/cpp.png"/>
+       <span>
+        C++
+       </span>
       </div>
-    </section>
+      <div class="skill">
+       <img alt="Python" src="/assets/img/python-logo-1-300x300.jpg"/>
+       <span>
+        Python
+       </span>
+      </div>
+      <div class="skill">
+       <img alt="Kotlin" src="/assets/img/kotlin.jpg"/>
+       <span>
+        Kotlin
+       </span>
+      </div>
+      <div class="skill">
+       <img alt="Dart" src="/assets/img/dart.png"/>
+       <span>
+        Dart
+       </span>
+      </div>
+      <div class="skill">
+       <img alt="HTML" src="/assets/img/html5-300x300.jpg"/>
+       <span>
+        HTML
+       </span>
+      </div>
+      <div class="skill">
+       <img alt="CSS" src="/assets/img/css3-300x300.jpg"/>
+       <span>
+        CSS
+       </span>
+      </div>
+      <div class="skill">
+       <img alt="MySQL" src="/assets/img/mysql-logo-1-300x300.jpg"/>
+       <span>
+        MySQL
+       </span>
+      </div>
+      <div class="skill">
+       <img alt="Firebase" src="/assets/img/firebase.png"/>
+       <span>
+        Firebase
+       </span>
+      </div>
+      <div class="skill">
+       <img alt="Git" src="/assets/img/git.png"/>
+       <span>
+        Git
+       </span>
+      </div>
+      <div class="skill">
+       <img alt="GitHub" src="/assets/img/github.png"/>
+       <span>
+        GitHub
+       </span>
+      </div>
+      <div class="skill">
+       <img alt="Bitbucket" src="/assets/img/bitbucket.png"/>
+       <span>
+        Bitbucket
+       </span>
+      </div>
+      <div class="skill">
+       <img alt="Vercel" src="/assets/img/vercel1868.jpg"/>
+       <span>
+        Vercel
+       </span>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="section" id="education">
+    <div class="wrap">
+     <div class="section-label">
+      05 &middot; Education
+     </div>
+     <h2 class="section-title">
+      Education
+     </h2>
+     <div class="education">
+      <div class="edu">
+       <h3>
+        Norwegian University of Science and Technology
+       </h3>
+       <div class="place">
+        Trondheim, Norway
+       </div>
+       <p>
+        <b>
+         Degree:
+        </b>
+        MSc in Cybersecurity &mdash; CYBERSURE Joint Master's Programme
+       </p>
+       <p>
+        <b>
+         Relevant coursework
+        </b>
+       </p>
+       <ul>
+        <li>
+         Cybersecurity &amp; Assurance
+        </li>
+        <li>
+         Ethical Hacking
+        </li>
+        <li>
+         Secure Cryptographic Implementations
+        </li>
+        <li>
+         Wireless Network Security
+        </li>
+        <li>
+         Data Privacy
+        </li>
+       </ul>
+      </div>
+      <div class="edu">
+       <h3>
+        Jamia Millia Islamia
+       </h3>
+       <div class="place">
+        New Delhi, India
+       </div>
+       <p>
+        <b>
+         Degree:
+        </b>
+        B.Tech in Computer Engineering
+       </p>
+       <p>
+        <b>
+         CGPA:
+        </b>
+        9.84
+       </p>
+       <p>
+        <b>
+         Relevant coursework
+        </b>
+       </p>
+       <ul>
+        <li>
+         Data Structures &amp; Algorithms
+        </li>
+        <li>
+         Database Management Systems
+        </li>
+        <li>
+         Object Oriented Programming
+        </li>
+        <li>
+         Machine Learning
+        </li>
+        <li>
+         Data Mining
+        </li>
+       </ul>
+      </div>
+      <div class="edu">
+       <h3>
+        Vishwa Bharati Public School
+       </h3>
+       <div class="place">
+        New Delhi, India
+       </div>
+       <p>
+        <b>
+         Senior Secondary School &mdash; 10+2 (Non Medical)
+        </b>
+       </p>
+       <p>
+        <b>
+         CGPA:
+        </b>
+        10
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="section" id="contact">
+    <div class="wrap">
+     <div class="contact-box">
+      <div>
+       <div class="section-label" style="color:#5ee1d1">
+        06 &middot; Contact
+       </div>
+       <h2>
+        Let's build something useful.
+       </h2>
+       <p>
+        Have an opportunity, project or just want to connect? I'd be happy to hear from you.
+       </p>
+      </div>
+      <div class="contact-links">
+       <a class="contact-link" href="mailto:dalwaditirth10@gmail.com">
+        <i class="fa-regular fa-envelope">
+        </i>
+        dalwaditirth10@gmail.com
+       </a>
+       <a class="contact-link" href="https://github.com/Tirth-Dalwadi" target="_blank">
+        <i class="fa-brands fa-github">
+        </i>
+        github.com/Tirth-Dalwadi
+       </a>
+       <a class="contact-link" href="https://www.linkedin.com/in/tirth-dalwadi/" target="_blank">
+        <i class="fa-brands fa-linkedin-in">
+        </i>
+        linkedin.com/in/tirth-dalwadi
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
   </main>
-
-  <!-- typed.js -->
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script type="text/javascript">
-    var typed = new Typed('.typing', {
-      strings: ["Developer", "Problem Solver", "Fast Learner"],
-      loop: true,
-      typeSpeed: 80,
-      backSpeed: 40
-    });
-  </script>
-
-  <!-- jQuery-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-  <!-- Materialize - Compiled and minified JavaScript-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
+  <footer>
+   &copy; 2026 Tirth Dalwadi &middot; Built with HTML, CSS &amp; JavaScript
+  </footer>
   <script>
-    // Materialize - Initializers
-    $(document).ready(function () {
-      $(".scrollspy").scrollSpy()
-      // Initialize collapse button
-      $(".button-collapse").sideNav({
-        menuWidth: 190, // Default is 240
-        edge: "left", // Choose the horizontal origin
-        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-      })
-    })
+   const words=['secure software','backend systems','scalable applications','cybersecurity solutions'];let i=0,j=0,del=false;
+const el=document.getElementById('typing');
+function type(){const w=words[i];el.textContent=w.slice(0,j);if(!del&&j<w.length){j++;setTimeout(type,65)}else if(!del){del=true;setTimeout(type,1300)}else if(j>0){j--;setTimeout(type,30)}else{del=false;i=(i+1)%words.length;setTimeout(type,250)}}type();
+const links=[...document.querySelectorAll('.nav a')];
+const sections=[...document.querySelectorAll('main section')];
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}})},{rootMargin:'-35% 0px -55%'});sections.forEach(s=>obs.observe(s));
   </script>
-</body>
-
+ </body>
 </html>
